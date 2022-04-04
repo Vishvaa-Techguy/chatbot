@@ -47,7 +47,9 @@ def get_response(intents_list , intents_json):
         result = "Redirecting..........."
     return "Bot : "+result
 
-print("Go ! Bot is running")
+print()
+print()
+print("Hey Iam ChatBot Ask Me Something")
 
 while True:
     message = input("Me : ")
