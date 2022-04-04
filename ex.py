@@ -4,7 +4,9 @@ app = Flask(__name__)
 
 @app.route("/")
 def main():
-    return render_template("index.html")
+    Message = "Hi there!"
+    return render_template("index.html",msg=Message)
 
-if __name__== "___main___":
+if __name__ == "__main__":
     app.run(debug=True)
+
