@@ -1,27 +1,32 @@
 {
 "intents":[
     {"tag":"greeting",
-    "patterns":["hello","hey","hi","good day","Greetings","what's up?","how is it going?"],
-    "responses":["Hello!","Hey there!","Im fine!","What can I do for you?"]},
+    "patterns":["hello","hey","hi","good day","greetings","what's up?","how is it going?"],
+    "responses":["Hello!","Hey there!","What can I do for you?"]},
     {
         "tag":"complaints",
-        "patterns":["I want to register myself in the train department","i want to register","i want to update my profile","I want to increase validity in my card","I want to renew my card","I want increase the money inside my card" ],
+        "patterns":["I want to increase validity in my card","I want to renew my card","I want increase the money inside my card" ],
         "responses":[" i will be glad to help , please do wait..."]
     },
     {
         "tag":"registeration",
-        "patterns":["I want to register myself in the train department","i want to register","register me","Register me" , "I wish to register in your organisation","I wish to register","i appeal to register myself"],
-        "responses":["Well i have to thank you , for registering in our organisation , you can download the app if you could."]
+        "patterns":["I want to register myself in the train department","I want to register","Register me","Register me","I wish to register in your organisation","I wish to register","I appeal to register myself"],
+        "responses":["Redirecting you to our regesitration website! if not visit : ___________"]
     },
     {
         "tag":"update",
-        "patterns":["I want to update my profile","I want to update money in my card","i would like to update","i wish to update soon."],
-        "responses":[]
+        "patterns":["I want to update my profile","I want to update money in my card","I would like to update","I wish to update soon."],
+        "responses":["Okay , Lets Update"]
     },
     {
         "tag":"exit",
-        "patterns":["thanks","like you","bye!","thank you very much","thank you for your service towards your nation","thanks for helping me"],
+        "patterns":["Thanks","Like you","Bye","Thank you very much","Thank you for your service towards your nation","Thanks for helping me"],
         "responses":["Thank you Have a nice day!","You are most welcome","You are a kind person,will be glad to help you again","Hope to see you soon"]
+    },
+    {
+        "tag":"thanks",
+        "patterns":["Thanks","Bye"],
+        "responses":["Thank you Have a nice day!"]
     }
 ]
 }  
