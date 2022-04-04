@@ -1,4 +1,5 @@
 import random , json , pickle
+import webbrowser
 import numpy as np
 import nltk
 from nltk.stem import WordNetLemmatizer
@@ -45,6 +46,7 @@ def get_response(intents_list , intents_json):
             # break
     if tag == 'registeration':
         result = "Redirecting..........."
+        webbrowser.open_new_tab("https://www.google.com")
     return "Bot : "+result
 
 print()
