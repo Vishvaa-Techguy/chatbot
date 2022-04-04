@@ -48,7 +48,6 @@ def get_response(intents_list , intents_json):
     return "Bot : "+result
 
 print()
-print()
 print("Hey Iam ChatBot Ask Me Something")
 
 while True:

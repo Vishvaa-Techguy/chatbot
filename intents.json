@@ -1,22 +1,27 @@
 {
 "intents":[
     {"tag":"greeting",
-    "patterns":["hello","hey","hi","good day","greetings","what's up?","how is it going?"],
+    "patterns":["Hello","Hey","Hi","What's up?","How is it going?"],
     "responses":["Hello!","Hey there!","What can I do for you?"]},
     {
         "tag":"complaints-update",
-        "patterns":["I want to increase validity in my card","I want to renew my card","I want to upgrade my card" ],
+        "patterns":["I want to increase validity in my card","I want to renew my card","I want to upgrade my card"],
         "responses":[" I will be glad to help , please do wait..."]
     },
     {
-        "tags":"complaints-registration",
+        "tag":"complaints-registration",
         "patterns":["There was a problem during my registeration","I cant register","Can't register","Problem im my registration"],
         "responses":["Try after sometime! Since our servers might be slow! "]
     },
     {
-        "tags":"complaints-payments",
-        "patterns":["There was a problem during my payment","Payment failed","Payment successful but no ticket issued","No tickect issued"],
+        "tag":"complaints-payments",
+        "patterns":["There was a problem during my payment","Payment failed"],
         "responses":["Sorry for your inconvinence! If amount is deduced it will be refunded in 3 working-days. Your ticket will be issued in 2 days if not"]
+    },
+    {
+        "tag":"complaints-ticket",
+        "patterns":["Payment successful but no ticket issued","No tickect issued"],
+        "responses":["Sorry for your inconvinence! Your ticket will be issued in 2 days if not."]
     },
     {
         "tag":"registeration",
@@ -30,7 +35,7 @@
     },
     {
         "tag":"exit",
-        "patterns":["Thanks","Like you","Bye","Thank you very much","Thank you for your service towards your nation","Thanks for helping me"],
+        "patterns":["Like you","Thank you very much","Thank you for your service towards your nation","Thanks for helping me"],
         "responses":["Thank you Have a nice day!","You are most welcome","You are a kind person,will be glad to help you again","Hope to see you soon"]
     },
     {
