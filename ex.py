@@ -59,6 +59,7 @@ def index():
         ints = predict_class(message)
         res = get_response(ints, intents)
         return render_template("index.html",reply=res)
+    return render_template("index.html")
 
 if __name__ == "__main__":
     app.run(debug=True)
