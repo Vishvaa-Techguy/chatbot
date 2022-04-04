@@ -1,5 +1,4 @@
 import random , json , pickle
-from webbrowser import get
 import numpy as np
 import nltk
 from nltk.stem import WordNetLemmatizer
