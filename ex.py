@@ -2,9 +2,11 @@ import random , json , pickle
 import webbrowser
 import numpy as np
 import nltk
-from flask import Flask,render_template,redirect
+from flask import Flask,render_template,redirect,request
 from nltk.stem import WordNetLemmatizer
 from tensorflow.keras.models import load_model
+
+app = Flask(__name__)
 
 lemmatizer = WordNetLemmatizer()
 intents = json.loads(open("intents.json").read())
@@ -50,11 +52,18 @@ def get_response(intents_list , intents_json):
         webbrowser.open_new_tab("https://www.google.com")
     return "Bot : "+result
 
-print()
-print("Hey Iam ChatBot Ask Me Something")
+@app.route("/" , methods=['POST','GET'])
+def index():
+    if request.method == "POST":
+        message = request.form.get("message")
+        ints = predict_class(message)
+        res = get_response(ints, intents)
+        return render_template("index.html",reply=res)
+# print()
+# print("Hey Iam ChatBot Ask Me Something")
 
-while True:
-    message = input("Me : ")
-    ints = predict_class(message)
-    res = get_response(ints, intents)
-    print(res)
+# while True:
+#     message = input("Me : ")
+#     ints = predict_class(message)
+#     res = get_response(ints, intents)
+#     print(res)
