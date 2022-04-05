@@ -9,6 +9,11 @@
         "responses":[" I will be glad to help , please do wait..."]
     },
     {
+        "tag":"queries",
+        "patterns":["what can you do?","What can you do?"],
+        "responses":["I can solve problems regarding your FAQs"]
+    },
+    {
         "tag":"complaints-registration",
         "patterns":["There was a problem during my registeration","I cant register","Can't register","Problem im my registration"],
         "responses":["Try after sometime! Since our servers might be slow! "]
@@ -16,7 +21,7 @@
     {
         "tag":"complaints-payments",
         "patterns":["There was a problem during my payment","Payment failed"],
-        "responses":["Sorry for your inconvinence! If amount is deduced it will be refunded in 3 working-days. Your ticket will be issued in 2 days if not"]
+        "responses":["Sorry for your inconvinence! If amount is deduced it will be refunded in 3 working-days."]
     },
     {
         "tag":"complaints-ticket",

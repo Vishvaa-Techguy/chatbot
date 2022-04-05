@@ -49,20 +49,22 @@ def get_response(intents_list , intents_json):
             # break
     if tag == 'registeration':
         result = "Redirecting..........."
-        webbrowser.open_new_tab("https://www.google.com")
-    return "Bot : "+result
+        webbrowser.open("https://www.google.com")
+    return result
 
 @app.route("/" , methods=['POST','GET'])
 def index():
-    if request.method == "POST":
-        message = request.form.get("message")
-        ints = predict_class(message)
-        res = get_response(ints, intents)
-        return render_template("index.html",reply=res)
     return render_template("index.html")
 
+@app.route("/get")
+def getresponse():
+    userText = request.args.get('msg')
+    ints = predict_class(userText)
+    res = get_response(ints, intents)
+    return str(res)
+
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True,host='0.0.0.0',port=3030)
 
 # print()
 # print("Hey Iam ChatBot Ask Me Something")
