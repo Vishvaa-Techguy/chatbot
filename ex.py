@@ -2,7 +2,7 @@ import random , json , pickle
 import webbrowser
 import numpy as np
 import nltk
-from flask import Flask,render_template,redirect,request
+from flask import Flask,render_template,redirect,request,url_for
 from nltk.stem import WordNetLemmatizer
 from tensorflow.keras.models import load_model
 
