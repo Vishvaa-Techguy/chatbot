@@ -1,10 +1,12 @@
+# -------------------------- Machine Learning and AI Imports ----------------------------
 import random , json , pickle
-import webbrowser
 import numpy as np
 import nltk
-from flask import Flask,render_template,redirect,request,url_for
 from nltk.stem import WordNetLemmatizer
 from tensorflow.keras.models import load_model
+# --------------------------- Flask and Web Imports ----------------------------------
+import webbrowser
+from flask import Flask,render_template,redirect,request,url_for
 
 app = Flask(__name__)
 
@@ -49,7 +51,7 @@ def get_response(intents_list , intents_json):
             # break
     if tag == 'registeration':
         result = "Redirecting..........."
-        webbrowser.open("https://www.google.com")
+        webbrowser.open("http://192.168.0.110:3030/")
     return result
 
 @app.route("/" , methods=['POST','GET'])
