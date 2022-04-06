@@ -2,11 +2,11 @@
     position: fixed;
     bottom: 0;
     right: 50px;
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); */
 }
 
 .collapsible {
-    /* background-color: rgb(226, 226, 21);
+    background-color: transparent;
     color: rgb(13, 14, 13);
     cursor: pointer;
     padding: 28px;
@@ -14,17 +14,18 @@
     text-align: center;
     outline: none;
     font-size: 20px;
-    border-radius: 10px 10px 0px 0px;
-    border: 3px solid rgb(255, 255, 255);
-    border-bottom: none; */
-    text-align: right;
-}
+    border-radius: 50px;
+    /* border: 3px solid rgb(255, 255, 255); */
+    border: none;
+    border-bottom: none;
+    text-align: right; 
+} 
 
 .content {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
-    background-color:#FFF8DC;
+    background-color:transparent;
 }
 
 .full-chat-block {
@@ -96,13 +97,13 @@
     border-radius: 10px;
     padding: 10px;
     font-size: 16px;
-    color: #000;
+    color: black;
     background-color: white;
     outline: none
 }
 
 .userText {
-    color: rgb(0, 0, 0);
+    color: white;
     font-family: Helvetica;
     font-size: 16px;
     font-weight: normal;
@@ -113,7 +114,7 @@
 .userText span {
     line-height: 1.5em;
     display: inline-block;
-    background: rgb(226, 226, 21);
+    background: #4daae7;
     padding: 10px;
     border-radius: 8px;
     border-bottom-right-radius: 2px;
@@ -171,8 +172,3 @@
         border-radius: 0px;
     }
 }
-section{
-    background: url("../images/back.jpg") no-repeat;
-    background-size:cover;
-    height: calc(100vh - 80px);
-  }

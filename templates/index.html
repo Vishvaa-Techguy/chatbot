@@ -15,7 +15,7 @@
 <body>
     <!-- CHAT BAR BLOCK -->
     <div class="chat-bar-collapsible">
-        <button id="chat-button" class="collapsible"><img src="../static/images/chatbot-icon.png" alt="image"></button>
+        <button id="chat-button" class="collapsible"><img src="../static/images/chatbot-icon.png" alt="image" class="chat-image"></button>
         <div class="content">
             <div class="full-chat-block">
                 <!-- Message Container -->
@@ -36,8 +36,6 @@
                             </div>
 
                             <div class="chat-bar-icons">
-                                <i id="chat-icon" style="color: crimson;" class="fa fa-fw fa-heart"
-                                    onclick="heartButton()"></i>
                                 <i id="chat-icon" style="color: rgb(0, 0, 0);" class="fa fa-fw fa-send"
                                     onclick="sendButton()"></i>
                             </div>
@@ -53,7 +51,6 @@
             </div>
         </div>
     </div>
-    <section></section>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="/static/scripts/chat.js"></script>
