@@ -12,7 +12,7 @@ while True:
     if input_ == "get":
         ticket = f"IRT{randint(100000,999999)}"
         mno = randint(1000000000,9999999999)
-        print(mno,ticket)
+        print((mno,ticket))
         cur = mydb.cursor()
         cur.execute(f"insert into ticket(mobile_number,ticketID) values('{mno}','{ticket}');")
         mydb.commit()
