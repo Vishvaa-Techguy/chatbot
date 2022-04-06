@@ -6,7 +6,7 @@
 }
 
 .collapsible {
-    background-color: rgb(226, 226, 21);
+    /* background-color: rgb(226, 226, 21);
     color: rgb(13, 14, 13);
     cursor: pointer;
     padding: 28px;
@@ -16,7 +16,8 @@
     font-size: 20px;
     border-radius: 10px 10px 0px 0px;
     border: 3px solid rgb(255, 255, 255);
-    border-bottom: none;
+    border-bottom: none; */
+    text-align: right;
 }
 
 .content {
