@@ -7,15 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Railways</title>
     <link rel="icon" type="image/x-icon" href="../static/images/favicon.ico">
-    <link rel="stylesheet" href="/static/css/chat.css">
-    <link rel="stylesheet" href="/static/css/home.css">
+    <link rel="stylesheet" href="../static/css/chat.css">
+    <link rel="stylesheet" href="../static/css/home.css">
     <script src="https://kit.fontawesome.com/e971ca7e25.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <!-- CHAT BAR BLOCK -->
     <div class="chat-bar-collapsible">
-        <button id="chat-button" class="collapsible"><img src="../static/images/chatbot-icon.png" alt="image" class="chat-image"></button>
+        <button id="chat-button" class="collapsible">
+            <div class = "smallicon" align="right">
+                <img src="../static/images/chatbot-icon.png" alt="chatbot-icon.jpg">
+            </div>
+        </button>
         <div class="content">
             <div class="full-chat-block">
                 <!-- Message Container -->
@@ -36,7 +40,7 @@
                             </div>
 
                             <div class="chat-bar-icons">
-                                <i id="chat-icon" style="color: rgb(0, 0, 0);" class="fa fa-fw fa-send"
+                                <i id="chat-icon" style="color: rgb(0, 0, 0);" class="fa fa-send"
                                     onclick="sendButton()"></i>
                             </div>
                         </div>
@@ -51,7 +55,8 @@
             </div>
         </div>
     </div>
+   
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="/static/scripts/chat.js"></script>
+<script src="../static/scripts/chat.js"></script>
 </html>

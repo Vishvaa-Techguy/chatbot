@@ -1,25 +1,21 @@
 .chat-bar-collapsible {
     position: fixed;
     bottom: 0;
-    right: 50px;
-    /* box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); */
+    right: 0px;
+}
+
+.smallicon{
+    position: relative;
 }
 
 .collapsible {
+    width: 100%;
     background-color: transparent;
     color: rgb(13, 14, 13);
     cursor: pointer;
-    padding: 28px;
-    width: 350px;
-    text-align: center;
-    outline: none;
-    font-size: 20px;
-    border-radius: 50px;
-    /* border: 3px solid rgb(255, 255, 255); */
     border: none;
-    border-bottom: none;
-    text-align: right; 
-} 
+    outline: none;
+    font-size: 20px;} 
 
 .content {
     max-height: 0;
@@ -32,6 +28,8 @@
     width: 350px;
     background: white;
     text-align: center;
+    border: 3px solid white;
+    border-radius: 15px;
     overflow: auto;
     scrollbar-width: none;
     height: max-content;
@@ -65,7 +63,9 @@
     justify-content: space-between;
     width: 100%;
     align-items: center;
-    background-color: rgb(235, 235, 235);
+    /* background-color: rgb(235, 235, 235); */
+    background-color: #63a4ff;
+    background-image: linear-gradient(315deg, #71aafa 0%, #20cfdb 74%);
     border-radius: 10px 10px 0px 0px;
     padding: 10px 0px 10px 10px;
 }
@@ -81,8 +81,8 @@
 
 #chat-icon:hover {
     opacity: .7;
+    cursor: pointer;
 }
-
 /* Chat bubbles */
 
 #userInput {
@@ -90,14 +90,14 @@
 }
 
 .input-box {
-    float: left;
+    float: right;
     border: none;
     box-sizing: border-box;
     width: 100%;
     border-radius: 10px;
     padding: 10px;
     font-size: 16px;
-    color: black;
+    color: #000;
     background-color: white;
     outline: none
 }
@@ -114,7 +114,7 @@
 .userText span {
     line-height: 1.5em;
     display: inline-block;
-    background: #4daae7;
+    background: linear-gradient(315deg, #06bcfb 0%, #4884ee 74%);
     padding: 10px;
     border-radius: 8px;
     border-bottom-right-radius: 2px;
@@ -134,7 +134,7 @@
 .botText span {
     line-height: 1.5em;
     display: inline-block;
-    background: #d3d3d3;
+    background: linear-gradient(315deg, #63a4ff 0%, #83eaf1 74%);
     padding: 10px;
     border-radius: 8px;
     border-bottom-left-radius: 2px;
@@ -161,14 +161,13 @@
     }
     .chat-bar-collapsible {
         position: fixed;
-        bottom: 0;
-        right: 0;
         width: 100%;
+        
+        
     }
     .collapsible {
-        width: 100%;
+       width: 100%;
         border: 0px;
-        border-top: 3px solid white;
         border-radius: 0px;
     }
 }
