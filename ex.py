@@ -50,8 +50,7 @@ def get_response(intents_list , intents_json):
             result = random.choice(i['responses'])
             # break
     if tag == 'registeration':
-        result = "Redirecting..........."
-        webbrowser.open("http://192.168.0.110:3030/")
+        result = "You will be redirected to our register page!"
     return result
 
 @app.route("/" , methods=['POST','GET'])

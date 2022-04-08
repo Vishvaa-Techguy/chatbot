@@ -45,8 +45,7 @@ def get_response(intents_list , intents_json):
             result = random.choice(i['responses'])
             # break
     if tag == 'registeration':
-        result = "Redirecting..........."
-        webbrowser.open_new_tab("https://www.google.com")
+        result = "You will be redirected to our register page!"
     return "Bot : "+result
 
 print()
