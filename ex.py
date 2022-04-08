@@ -5,7 +5,6 @@ import nltk
 from nltk.stem import WordNetLemmatizer
 from tensorflow.keras.models import load_model
 # --------------------------- Flask and Web Imports ----------------------------------
-import webbrowser
 from flask import Flask,render_template,redirect,request,url_for
 
 app = Flask(__name__)

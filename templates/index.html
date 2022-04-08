@@ -6,9 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Railways</title>
-    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/chat.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}>
+    <!-- {{ url_for('static', filename='images/favicon.ico') }} -->
+    <link rel="icon" type="image/x-icon" href="/static/images/favicon.ico">
+    <link rel="stylesheet" href="/static/css/chat.css">
+    <link rel="stylesheet" href="/static/css/home.css">
     <script src="https://kit.fontawesome.com/e971ca7e25.js" crossorigin="anonymous"></script>
 </head>
 
@@ -26,7 +27,7 @@
     <div class="chat-bar-collapsible">
         <button id="chat-button" class="collapsible">
             <div class = "smallicon" align="right">
-                <img src="{{ url_for('static', filename='images/chatbot-icon.png') }}" alt="chatbot-icon.jpg">
+                <img src="/static/images/chatbot-icon.png" alt="chatbot-icon.jpg">
             </div>
         </button>
         <div class="content">
@@ -67,5 +68,5 @@
    
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="{{ url_for('static', filename='scripts/chat.js') }}"></script>
+<script src="/static/scripts/chat.js"></script>
 </html>
