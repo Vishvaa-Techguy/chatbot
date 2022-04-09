@@ -44,8 +44,6 @@ def get_response(intents_list , intents_json):
         if i['tag'] == tag:
             result = random.choice(i['responses'])
             # break
-    if tag == 'registeration':
-        result = "You will be redirected to our register page!"
     return "Bot : "+result
 
 print()

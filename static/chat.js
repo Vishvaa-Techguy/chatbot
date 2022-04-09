@@ -4,11 +4,12 @@ var coll = document.getElementsByClassName("collapsible");
 for (let i = 0; i < coll.length; i++) {
     coll[i].addEventListener("click", function () {
         this.classList.toggle("active");
-
+        let chatheading = "<div id='Chatwithus'><span style='color: black; text-align: center; padding:20px'>Chat with us!</span></div>"
         var content = this.nextElementSibling;
-
+        document.getElementById("chat-button").innerHTML = chatheading;
         if (content.style.maxHeight) {
             content.style.maxHeight = null;
+            document.getElementById("chat-button").innerHTML = "<div class = 'smallicon' align='right' ><img src='/static/chatbot-icon.png' alt='chatbot-icon.jpg'></img></div>";
         } else {
             content.style.maxHeight = content.scrollHeight + "px";
         }

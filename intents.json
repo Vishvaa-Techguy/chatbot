@@ -1,52 +1,59 @@
 {
 "intents":[
-    {"tag":"greeting",
-    "patterns":["Hello","Hey","Hi","What's up?","How is it going?"],
-    "responses":["Hello!","Hey there!","What can I do for you?"]},
+    {   
+        "tag":"greeting",
+        "patterns":["Hello","Hey","Hi","What's up?","How is it going?"],
+        "responses":["Hello!","Hey there!"]
+    },
     {
-        "tag":"complaints-update",
-        "patterns":["I want to increase validity in my card","I want to renew my card","I want to upgrade my card"],
-        "responses":[" I will be glad to help , please do wait..."]
+        "tag":"update-subscription",
+        "patterns":["I want to know the validity of my subscription","I want to continue my subscription","I want to upgrade my existing subscription"],
+        "responses":["You can manage your subscription by visiting Manage Subscriptions page!","Go to Manage Subscriptions -> Update."]
     },
     {
         "tag":"queries",
-        "patterns":["what can you do?","What can you do?"],
+        "patterns":["what can you do?","What can you do?","help me"],
         "responses":["I can solve problems regarding your FAQs"]
     },
     {
         "tag":"complaints-registration",
         "patterns":["There was a problem during my registeration","I cant register","Can't register","Problem im my registration"],
-        "responses":["Try after sometime! Since our servers might be slow! "]
+        "responses":["Try after sometime , this might happened due to network issues"]
     },
     {
         "tag":"complaints-payments",
-        "patterns":["There was a problem during my payment","Payment failed"],
+        "patterns":["There was a problem during my payment","Payment failed","amount debited but payment not succesfull"],
         "responses":["Sorry for your inconvinence! If amount is deduced it will be refunded in 3 working-days."]
     },
     {
         "tag":"complaints-ticket",
-        "patterns":["Payment successful but no ticket issued","No tickect issued"],
-        "responses":["Sorry for your inconvinence! Your ticket will be issued in 2 days if not."]
+        "patterns":["Payment successful but no ticket issued","No tickect issued","Ticket not generated"],
+        "responses":["Sorry for your inconvinence! Your ticket will be issued in 2 days after payment."]
     },
     {
         "tag":"registeration",
-        "patterns":["I want to register myself in the train department","I want to register","Register me","Register me","I wish to register in your organisation","I wish to register","I appeal to register myself"],
-        "responses":["Redirecting you to our regesitration website! if not visit : ___________"]
+        "patterns":["I want to register myself in the website","I want to register","Register me","I wish to register in your website","I wish to register","I appeal to register myself","I wanna register"],
+        "responses":["Redirecting you to our regesitration website! if not visit : https://www.irctc.co.in/nget/profile/user-registration"]
     },
     {
         "tag":"update",
-        "patterns":["I want to update my profile","I want to update money in my card","I would like to update","I wish to update soon."],
-        "responses":["Okay , Lets Update"]
+        "patterns":["I want to update my profile","I would like to update","I wish to update the name"],
+        "responses":["You can update you profile in Manage Profile section","Go to Manage Profile"]
     },
     {
-        "tag":"exit",
-        "patterns":["Like you","Thank you very much","Thank you for your service towards your nation","Thanks for helping me"],
-        "responses":["Thank you Have a nice day!","You are most welcome","You are a kind person,will be glad to help you again","Hope to see you soon"]
+        "tag":"offer",
+        "patterns":["What do you offer?","What are the subscriptions you offer?","How many subscriptions do you have?","Can I know about your subscriptions"],
+        "responses":["We are offering three subscriptions:\nSilver\nGold\nPlatinum\nwith it's own advantage!","We have main Subscriptions\nSilver\nGold\nPlatinum\n"]
+    },
+    {
+        "tag":"appericiation",
+        "patterns":["Like you","Thank you for your service","Thanks for helping me"],
+        "responses":["Thank you very much","You are a kind person,I will be glad to help you again","I'm glad to help you"]
     },
     {
         "tag":"thanks",
-        "patterns":["Thanks","Bye"],
-        "responses":["Thank you Have a nice day!"]
+        "patterns":["Thank you very much","Bye","thanks","Thanks"],
+        "responses":["Thank you Have a nice day!","Hope to see you soon"]
     }
 ]
 }  
