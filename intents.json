@@ -11,6 +11,11 @@
         "responses":["You can manage your subscription by visiting Manage Subscriptions page!","Go to Manage Subscriptions -> Update."]
     },
     {
+        "tag":"check-train",
+        "patterns":["I want to check train today","I want to check the trains"],
+        "responses":["Redirecting you to IRTC website!"]
+    },
+    {
         "tag":"queries",
         "patterns":["what can you do?","What can you do?","help me"],
         "responses":["I can solve problems regarding your FAQs"]

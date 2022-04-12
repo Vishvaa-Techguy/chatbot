@@ -1,5 +1,6 @@
 # -------------------------- Machine Learning and AI Imports ----------------------------
 import random , json , pickle
+import webbrowser
 import numpy as np
 import nltk
 from nltk.stem import WordNetLemmatizer
@@ -48,8 +49,8 @@ def get_response(intents_list , intents_json):
         if i['tag'] == tag:
             result = random.choice(i['responses'])
             # break
-    if tag == 'registeration':
-        result = "You will be redirected to our register page!"
+    if tag== "check-train":
+        webbrowser.open_new_tab("https://www.irctc.co.in/nget/train-search")
     return result
 
 @app.route("/" , methods=['POST','GET'])
