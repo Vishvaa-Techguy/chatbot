@@ -7,9 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Railways</title>
     <!-- {{ url_for('static', filename='images/favicon.ico') }} -->
-    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
-    <link rel="stylesheet" href="/static/chat.css">
-    <link rel="stylesheet" href="/static/home.css">
+    <!-- {{ url_for('static', filename='chat.css')}} -->
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='chat.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css')}}">
     <script src="https://kit.fontawesome.com/e971ca7e25.js" crossorigin="anonymous"></script>
 </head>
 
@@ -68,5 +69,5 @@
    
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="/static/chat.js"></script>
+<script src="{{ url_for('static', filename='chat.js')}}"></script>
 </html>
