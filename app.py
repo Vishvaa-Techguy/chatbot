@@ -1,9 +1,14 @@
+# -------------------------- Machine Learning and AI Imports ----------------------------
 import random , json , pickle
 import webbrowser
 import numpy as np
 import nltk
 from nltk.stem import WordNetLemmatizer
 from tensorflow.keras.models import load_model
+# --------------------------- Flask and Web Imports----------------------------------
+from flask import Flask,render_template,redirect,request,url_for
+
+app = Flask(__name__)
 
 lemmatizer = WordNetLemmatizer()
 intents = json.loads(open("intents.json").read())
@@ -43,14 +48,20 @@ def get_response(intents_list , intents_json):
     for i in list_of_intents:
         if i['tag'] == tag:
             result = random.choice(i['responses'])
-            # break
-    return "Bot : "+result
+    if tag== "check-train":
+        webbrowser.open_new_tab("https://www.irctc.co.in/nget/train-search")
+    return result
 
-print()
-print("Hey Iam ChatBot Ask Me Something")
+@app.route("/" , methods=['POST','GET'])
+def index():
+    return render_template("index.html")
 
-while True:
-    message = input("Me : ")
-    ints = predict_class(message)
+@app.route("/get")
+def getresponse():
+    userText = request.args.get('msg')
+    ints = predict_class(userText)
     res = get_response(ints, intents)
-    print(res)
+    return str(res)
+
+if __name__ == "__main__":
+    app.run(debug=True,host='0.0.0.0',port=3030)
